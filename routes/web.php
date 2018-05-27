@@ -18,5 +18,5 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/tasks', 'TasksController@index')->name('tasks.index');
+Route::get('/tasks', 'TasksController@index')->name('tasks.index')->middleware('auth');
 
